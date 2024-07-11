@@ -21,5 +21,6 @@ If using PureT-XE as the factual model, set `--pretrained_path` to the path wher
 
 ## Test on FlickrStyle10k dataset
 * `--data_test` needs to be set to the path where `'FlickrStyle10k_ViT-L_14_test.pkl'` is located.
-* If generating romantic captions, set `--gedi_model_name_or_path` to the path where `'model_ro_1.pt'` is located,  `--code_1` to `' romantic'` (Ensure there is a space at the beginning.), `--code_0` to `' factual'`, `--disc_weight` to `140`, `--teststyle` to `'romantic'`.
-* If generating humorous captions, set `--gedi_model_name_or_path` to the path where `'model_fu_1.pt'` is located,  `--code_1` to `' humorous'` (Ensure there is a space at the beginning.), `--code_0` to `' factual'`, `--disc_weight` to `175`, `--teststyle` to `'humorous'`.
+* If generating romantic captions, set `--gedi_model_name_or_path` to the path where `'model_ro_1.pt'` is located,  `--code_1` to `' romantic'`, `--code_0` to `' factual'`, `--disc_weight` to `140`, `--teststyle` to `'romantic'`.
+* If generating humorous captions, set `--gedi_model_name_or_path` to the path where `'model_fu_1.pt'` is located,  `--code_1` to `' humorous'`, `--code_0` to `' factual'`, `--disc_weight` to `175`, `--teststyle` to `'humorous'`.
+* Ensure there is a space at the beginning of `--code_1` and `--code_1`.
