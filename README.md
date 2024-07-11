@@ -11,4 +11,5 @@ Important arguments include:
 * `--teststyle`, the desired style
 * `--gen_model_type`, the type of factual model
 
-## Generating romantic captions 
+## factual model
+If using PureT-XE as the factual model, set `--pretrained_path` to the path where `'model_pureT_XE_16.pth'` is located, and set `--gen_model_type` to `'pureT_XE'`. If using PureT-SCST as the factual model, set `--pretrained_path` to the path where `'model_pureT_SCST_30.pth'` is located, and set `--gen_model_type` to `'pureT_SCST'`.
