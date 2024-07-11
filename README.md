@@ -18,3 +18,8 @@ If using PureT-XE as the factual model, set `--pretrained_path` to the path wher
 * `--data_test` needs to be set to the path where `'Senticap_ViT-L_14_test.pkl'` is located.
 * If generating positive captions, set `--gedi_model_name_or_path` to the path where `'model_pos_9.pt'` is located,  `--code_1` to `'positive'`, `--code_0` to `'negative'`, `--disc_weight` to `200`, `--teststyle` to `'positive'`.
 * If generating negative captions, set `--gedi_model_name_or_path` to the path where `'model_neg_9.pt'` is located,  `--code_1` to `'negative'`, `--code_0` to `'positive'`, `--disc_weight` to `175`, `--teststyle` to `'negative'`.
+
+## Test on FlickrStyle10k dataset
+* `--data_test` needs to be set to the path where `'FlickrStyle10k_ViT-L_14_test.pkl'` is located.
+* If generating romantic captions, set `--gedi_model_name_or_path` to the path where `'model_ro_1.pt'` is located,  `--code_1` to `' romantic'`, `--code_0` to `' factual'`, `--disc_weight` to `140`, `--teststyle` to `'romantic'`.
+* If generating humorous captions, set `--gedi_model_name_or_path` to the path where `'model_fu_1.pt'` is located,  `--code_1` to `' humorous'`, `--code_0` to `' factual'`, `--disc_weight` to `175`, `--teststyle` to `'humorous'`.
