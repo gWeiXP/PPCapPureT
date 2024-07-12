@@ -219,15 +219,15 @@ if __name__ == "__main__":
     # base model
     parser.add_argument("--pretrained_path", default="/home/liwc/wxp/Alignment/github/trained_model/factual_model/model_pureT_SCST_30.pth")
     # gedi model
-    parser.add_argument("--gedi_model_name_or_path", default="/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_fu_1.pt", type=str)
-    parser.add_argument("--code_1", default=" humorous")
-    parser.add_argument("--code_0", default=" factual")
-    parser.add_argument("--disc_weight", type=float, default=175)
+    parser.add_argument("--gedi_model_name_or_path", default="/home/liwc/wxp/Alignment/github/trained_model/stylized_model/model_pos_9.pt", type=str)
+    parser.add_argument("--code_1", default="positive")
+    parser.add_argument("--code_0", default="negative")
+    parser.add_argument("--disc_weight", type=float, default=200)
     
     # 数据集参数
     parser.add_argument("--vocab_path", default="./mscoco/txt/coco_vocabulary.txt")
-    parser.add_argument('--data_test', default='/home/liwc/wxp/Alignment/github/dataset/FlickrStyle10k/FlickrStyle10k_ViT-L_14_test.pkl')
-    parser.add_argument('--teststyle', default='humorous')
+    parser.add_argument('--data_test', default='/home/liwc/wxp/Alignment/github/dataset/Senticap/Senticap_ViT-L_14_test.pkl')
+    parser.add_argument('--teststyle', default='positive')
     parser.add_argument('--max_seq_len', default=17)
     parser.add_argument("--batch_size", default=36)
     # 保存
@@ -325,7 +325,7 @@ if __name__ == "__main__":
         generate_path = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle
         if not os.path.exists(generate_path):
             os.makedirs(generate_path)
-            
+
         out_txt_dir = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle +"/captions_generate_"+ str(args.disc_weight) + ".txt"
         with open(out_txt_dir, "w") as file:
             for generate_ref in gens:
