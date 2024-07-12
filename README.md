@@ -15,6 +15,7 @@ Important arguments include:
 * Download the processed dataset and trained models from [Baidu Netdisk](https://pan.baidu.com/s/1rBb8-4_lp2IfxJkEO0MmmA). the extracted code is 'zp8c'. The 'classifier' folder needs to be placed in the current directory.
 * Download MSCOCO [validation images](http://images.cocodataset.org/zips/val2014.zip)
 * Please make sure to modify the code for image paths in the ClipCocoDataset class within the utils.py file to obtain the correct image paths.
+* Regarding the environment, please note that `transformers==2.8.0` is required; higher versions may cause incompatibility issues
 
 
 ## Factual model
