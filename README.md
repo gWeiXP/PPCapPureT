@@ -11,6 +11,12 @@ Important arguments include:
 * `--teststyle`, the desired style
 * `--gen_model_type`, the type of factual model
 
+## dataset and trained models
+* Download the processed dataset and trained models from [Baidu Netdisk](https://pan.baidu.com/s/1rBb8-4_lp2IfxJkEO0MmmA). the extracted code is 'zp8c'. The 'classifier' folder needs to be placed in the current directory.
+* Download MSCOCO [validation images](http://images.cocodataset.org/zips/val2014.zip)
+* Please make sure to modify the code for image paths in the ClipCocoDataset class within the utils.py file to obtain the correct image paths.
+
+
 ## Factual model
 If using PureT-XE as the factual model, set `--pretrained_path` to the path where `'model_pureT_XE_16.pth'` is located, and set `--gen_model_type` to `'pureT_XE'`. If using PureT-SCST as the factual model, set `--pretrained_path` to the path where `'model_pureT_SCST_30.pth'` is located, and set `--gen_model_type` to `'pureT_SCST'`.
 
