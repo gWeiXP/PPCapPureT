@@ -3,13 +3,18 @@
 Run generate_guide.py to apply PPCap to PureT and generate stylized captions.
 Important arguments include:
 * `--pretrained_path`, the path of pre-trained factual model
-* `--gedi_model_name_or_path`, the path of trained factual model
+* `--gedi_model_name_or_path`, the path of trained stylized model
 * `--code_1`, the desired style
 * `--code_0`, the undesired style
 * `--disc_weight`, the weight w
 * `--data_test`, the path of test set
 * `--teststyle`, the desired style
 * `--gen_model_type`, the type of factual model
+
+Apologies, we noticed that there are some absolute paths in the code that need to be modified to match the file paths on your device.
+* The paths like "/home/liwc/wxp/refercode/GeDi_Final/PPL/LM_ro" in `utils.py eval_ppl()` : we have uploaded the `PPL` folder to [PPCap](https://github.com/gWeiXP/PPCap).
+* The paths like "/home/liwc/wxp/dataset/MSCOCO/train2014/" in `utils.py ClipCocoDataset()` : you may need to modify the code so that `filename` obtains the paths of images on your device.
+* The paths ""/home/liwc/wxp/refercode/DataTestProcess/bert-base-uncased/vocab.txt"" in `utils.py eval_acc()` : we have uploaded the `bert-base-uncased` folder to [PPCap](https://github.com/gWeiXP/PPCap).
 
 ## Datasets and trained models
 * Download the processed dataset and trained models from [Baidu Netdisk](https://pan.baidu.com/s/1rBb8-4_lp2IfxJkEO0MmmA). the extracted code is 'zp8c'. The 'classifier' folder needs to be placed in the current directory.
