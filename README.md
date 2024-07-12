@@ -1,6 +1,9 @@
 # PPCap_PureT
-# Using the style discriminator to guide the factual model in generating stylized captions.
-Run generate_guide.py to apply PPCap to PureT and generate stylized captions.
+
+We followed the instructions in the README and checked the project thoroughly; it can now run successfully.
+
+## Using the style discriminator to guide the factual model in generating stylized captions.
+Run `generate_guide.py` to apply PPCap to PureT and generate stylized captions.
 Important arguments include:
 * `--pretrained_path`, the path of pre-trained factual model
 * `--gedi_model_name_or_path`, the path of trained stylized model
