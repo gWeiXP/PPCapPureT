@@ -322,6 +322,10 @@ if __name__ == "__main__":
         result.update(other_metrics)
 
         # 保存描述
+        generate_path = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle
+        if not os.path.exists(generate_path):
+            os.makedirs(generate_path)
+            
         out_txt_dir = args.generated_path + "/" + args.gen_model_type + "/" + args.teststyle +"/captions_generate_"+ str(args.disc_weight) + ".txt"
         with open(out_txt_dir, "w") as file:
             for generate_ref in gens:
